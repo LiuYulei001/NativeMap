@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uro-L8-Efw">
+                                <rect key="frame" x="166" y="590" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CX4-MS-m49"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-Ch-I6V">
+                                <rect key="frame" x="166" y="626" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="IpN-MJ-onn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSZ-yW-DZa">
+                                <rect key="frame" x="171.5" y="478" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="08n-UL-Cz6"/>
+                                    <constraint firstAttribute="height" constant="30" id="EKg-Ne-mdo"/>
+                                </constraints>
+                                <state key="normal" title="导航"/>
+                                <connections>
+                                    <action selector="GPS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BuP-ac-YCF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99Q-AI-VtD">
+                                <rect key="frame" x="141" y="535" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EFR-Cp-U8n"/>
+                                    <constraint firstAttribute="width" constant="92" id="YDK-2S-0Uw"/>
+                                </constraints>
+                                <state key="normal" title="获取当前位置"/>
+                                <connections>
+                                    <action selector="getLacation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Lo-ii-Fbx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="99Q-AI-VtD" firstAttribute="centerX" secondItem="Uro-L8-Efw" secondAttribute="centerX" id="2bM-xS-bSD"/>
+                            <constraint firstItem="h2R-Ch-I6V" firstAttribute="top" secondItem="Uro-L8-Efw" secondAttribute="bottom" constant="15" id="7Vm-nr-v2Q"/>
+                            <constraint firstItem="Uro-L8-Efw" firstAttribute="top" secondItem="99Q-AI-VtD" secondAttribute="bottom" constant="25" id="MJZ-Bf-aRS"/>
+                            <constraint firstItem="h2R-Ch-I6V" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="csd-uu-dGF"/>
+                            <constraint firstItem="Uro-L8-Efw" firstAttribute="centerX" secondItem="h2R-Ch-I6V" secondAttribute="centerX" id="nDO-xb-afS"/>
+                            <constraint firstItem="99Q-AI-VtD" firstAttribute="top" secondItem="LSZ-yW-DZa" secondAttribute="bottom" constant="27" id="ncn-m5-OMt"/>
+                            <constraint firstItem="LSZ-yW-DZa" firstAttribute="centerX" secondItem="99Q-AI-VtD" secondAttribute="centerX" id="rFT-jh-Z1E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h2R-Ch-I6V" secondAttribute="bottom" constant="20" id="vIs-BF-Poj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LatitudeAndLongitude" destination="Uro-L8-Efw" id="aYk-Ry-JFK"/>
+                        <outlet property="address" destination="h2R-Ch-I6V" id="L48-b1-DTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
